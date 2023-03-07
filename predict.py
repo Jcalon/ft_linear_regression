@@ -19,6 +19,9 @@ def main():
 	except:
 		print("Cannot cast '{}' to float.".format(km))
 		exit(1)
+	if km < 0:
+		print("Km can't be negative")
+		exit(1)
 	theta0, theta1 = get_thetas()
 	# Linear function
 	price = int(theta0 + (theta1 * km))
